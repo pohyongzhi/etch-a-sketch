@@ -1,7 +1,7 @@
 // Query container element
 const container = document.querySelector(".container");
 
-let grids = 16;
+let grids = 100;
 
 // Create 16 rows
 for (let row = 1; row < grids; row++) {
@@ -21,4 +21,42 @@ for (let row = 1; row < grids; row++) {
 }
 
 // Mouse hover event
-// document.addEventListener("mouseover", );
+document.addEventListener("mouseover", (event) => {
+    const colorCode = generateColorCode();
+    const targetId = "#" + event.target.id;
+    console.log(colorCode);
+
+    let div = document.querySelector(targetId);
+    div.style.backgroundColor = colorCode;
+});
+
+function generateColorCode() {
+    const alphabets = [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+    ];
+    const noOfIteration = 6;
+
+    let colorCode = "#";
+
+    for (let i = 0; i < noOfIteration; i++) {
+        let index = Math.floor(Math.random() * alphabets.length);
+        colorCode += alphabets[index];
+    }
+
+    return colorCode;
+}
