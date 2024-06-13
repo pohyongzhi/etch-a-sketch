@@ -9,8 +9,23 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 2rem;
+}
+
+.header > p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    border-radius: 0.75rem;
+    background-color: cornflowerblue;
+    border: 0;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    font-weight: 800;
 }
 
 .container {
@@ -18,7 +33,7 @@ body {
     flex-direction: column;
     width: 80vh;
     height: 80vh;
-    border: 1px black solid;
+    background-color: black;
 }
 
 .row {
@@ -29,4 +44,5 @@ body {
 .col {
     border: black 1px solid;
     flex: 1;
+    background-color: white;
 }
